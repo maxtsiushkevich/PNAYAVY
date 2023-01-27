@@ -37,6 +37,10 @@ public:
         for(int i = 0; i < a.size; i++)
             mas[i] = a.mas[i];
     }
+    ~Massiv()
+    {
+        delete [] mas;
+    }
     Massiv operator | (Massiv &a)
     {
         T *buf = new T[this->size + a.size];
